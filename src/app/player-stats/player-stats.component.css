@@ -1,0 +1,13 @@
+.header-elements{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(104, 90, 85);
+    color:rgb(226, 178, 202);
+    font-size: x-large;
+    padding-top: 1%;
+}
+
+.head-element{
+    margin-right: 6%;
+}

@@ -1,0 +1,24 @@
+.toolbar{
+    background-color: #c4b1a4;
+}
+
+.app-name{
+    font-size: xx-large;
+    color: rgb(109, 101, 108);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.header-elements{
+    font-size: medium;
+    color:rgb(129, 127, 123);
+    margin-left: 1.2%;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+/* h2{
+    margin-left: 20%;
+    margin-top: 5%;
+    font-size: xx-large;
+    font-family: monospace;
+} */

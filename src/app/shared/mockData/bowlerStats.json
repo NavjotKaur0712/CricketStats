@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "name": "M.Muralidharan",
+        "matches": 133,
+        "imagePath": "https://images.hindustantimes.com/img/2021/02/15/550x309/_9dc24812-abe4-11ea-99c1-b8a846b2b30c_1613406472706.jpg",
+        "best": "9/51",
+        "average": 22.72,
+        "wickets": 800,
+        "fifers": 67
+    },
+    {
+        "id": 1,
+        "name": "Shane Warne",
+        "matches": 145,
+        "imagePath": "https://www.theweek.in/content/dam/week/news/sports/images/2019/1/4/shane-warne-file-reuters.jpg",
+        "best": "8/71",
+        "average": 22.72,
+        "wickets": 708,
+        "fifers": 67
+    },
+    {
+        "id": 2,
+        "name": "JM Anderson ",
+        "matches": 165,
+        "imagePath": "https://static.toiimg.com/thumb/msid-77758386,width-1200,height-900,resizemode-4/.jpg",
+        "best": "7/42",
+        "average": 26.53,
+        "wickets": 629,
+        "fifers": 31
+    },
+    {
+        "id": 3,
+        "name": "Anil Kumble",
+        "matches": 132,
+        "imagePath": "https://www.crictracker.com/wp-content/uploads/2018/12/Anil-Kumble.jpg",
+        "best": "10/74",
+        "average": 29.65,
+        "wickets": 619,
+        "fifers": 35
+    },
+    {
+        "id": 4,
+        "name": "Glenn McGrath",
+        "matches": 124,
+        "imagePath": "https://resources.pulse.icc-cricket.com/ICC/photo/2018/02/08/3ca3295e-5c41-45c8-8537-826f5930cfc4/Main.jpg",
+        "best": "10/27",
+        "average": 21.65,
+        "wickets": 563,
+        "fifers": 29
+    },
+    {
+        "id": 5,
+        "name": "Stuart broad",
+        "matches": 149,
+        "imagePath": "https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/306200/306226.6.jpg",
+        "best": "10/74",
+        "average": 27.12,
+        "wickets": 524,
+        "fifers": 18
+    }
+]

@@ -1,0 +1,77 @@
+[
+    {
+        "country" : "New Zealand",
+        "points" : "2054",
+        "ratings": "121",
+        "image" : "src/assets/images/nz.jpg",
+        "id" : 1
+    },
+    {
+        "country" : "England",
+        "points" : "3793",
+        "ratings": "119",
+        "image" : "",
+        "id" : 2
+    },
+    
+    {
+        "country" : "Australia",
+        "points" : "3244",
+        "ratings": "116",
+        "image" : "",
+        "id" : 3
+    },
+    {
+        "country" : "India",
+        "points" : "3624",
+        "ratings": "113",
+        "image" : "",
+        "id" : 4
+    }, 
+    {
+        "country" : "South Africa",
+        "points" : "2267",
+        "ratings": "103",
+        "image" : "",
+        "id" : 5
+    }, 
+    
+    {
+        "country" : "Pakistan",
+        "points" : "2524",
+        "ratings": "93",
+        "image" : "",
+        "id" : 6
+    },
+    {
+        "country" : "Bangladesh",
+        "points" : "2639",
+        "ratings": "91",
+        "image" : "",
+        "id" : 7
+    },
+    
+    {
+        "country" : "West Indies",
+        "points" : "2623",
+        "ratings": "84",
+        "image" : "",
+        "id" : 8
+    },
+    {
+        "country" : "Sri Lanka",
+        "points" : "2303",
+        "ratings": "79",
+        "image" : "",
+        "id" : 9
+    },
+    
+    {
+        "country" : "Afghanistan",
+        "points" : "1054",
+        "ratings": "62",
+        "image" : "",
+        "id" : 10
+    }
+    ]
+    

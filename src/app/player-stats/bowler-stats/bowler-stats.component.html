@@ -1,0 +1,16 @@
+<!-- <p>bowler-stats works!</p> -->
+<p *ngFor="let bowlerStat of bowlerStats" (click)="onBowlerStats(bowlerStat)">
+    <mat-card class="card">
+        <mat-card-content>
+            <img mat-card-image [src]="bowlerStat.imagePath">
+            <h2><b>{{bowlerStat.name}}</b></h2>
+        </mat-card-content>
+        <mat-card-actions>
+            <mat-card class="card-elements">
+                <p><b>MATCHES:</b><span>{{bowlerStat.matches}}</span></p>
+                <p><b>WICKETS:</b><span>{{bowlerStat.wickets}}</span></p>
+                <p><b>BEST:</b><span>{{bowlerStat.best}}</span></p>
+            </mat-card>
+        </mat-card-actions>
+    </mat-card>
+</p>

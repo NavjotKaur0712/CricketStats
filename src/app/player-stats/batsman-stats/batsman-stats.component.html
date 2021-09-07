@@ -1,0 +1,16 @@
+<!-- <p>batsman-stats works!</p> -->
+<p *ngFor="let batsmanStat of batsmanStats" (click)="onBatsmanStats(batsmanStat)">
+    <mat-card class="card">
+        <mat-card-content>
+            <img mat-card-image [src]="batsmanStat.imagePath">
+            <h2><b>{{batsmanStat.name}}</b></h2>
+        </mat-card-content>
+        <mat-card-actions>
+            <mat-card class="card-elements">
+                <p><b>MATCHES:</b><span>{{batsmanStat.matches}}</span></p>
+                <p><b>RUNS:</b><span>{{batsmanStat.runs}}</span></p>
+                <p><b>BEST:</b><span>{{batsmanStat.best}}</span></p>
+            </mat-card>
+        </mat-card-actions>
+    </mat-card>
+</p>

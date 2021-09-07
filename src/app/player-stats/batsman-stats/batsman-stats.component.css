@@ -1,0 +1,21 @@
+h2{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 33px;
+    color:rgb(102, 47, 8);
+}
+
+.card-elements{
+    font-family: cursive;
+    font-size: 20px;
+    color:rgb(161, 83, 30);
+    padding-left: 23%;
+    font-weight: 2000px;
+}
+
+.card{
+    margin-top: 5%
+}
+
+img{
+    height: 230px;
+}

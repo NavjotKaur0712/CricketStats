@@ -1,0 +1,76 @@
+[
+    {
+        "id": 0,
+        "name": "Sachin Tendulkar",
+        "matches": 463,
+        "imagePath": "https://images.newindianexpress.com/uploads/user/imagelibrary/2021/3/16/w900X450/Sachin_Tendulkar_PTI_Photo.jpg?w=400&dpr=2.6",
+        "runs" : "18426",
+        "best": "200*",
+        "average": 44.83,
+        "strikerate": 86.23,
+        "fifties": 96,
+        "centuries" : 49     
+    },
+    {
+        "id": 1,
+        "name": "Kumar Sangakara",
+        "matches": 404,
+        "imagePath": "https://cdn.wisden.com/wp-content/uploads/2020/10/GettyImages-117046605-scaled-e1603794197561-980x530.jpg",
+        "runs" : "14234",
+        "best": "169",
+        "average": 41.98,
+        "strikerate": 78.26,
+        "fifties": 93,
+        "centuries" : 25
+    },
+    {
+        "id": 2,
+        "name": "Ricky Ponting",
+        "matches": 375,
+        "imagePath": "https://bsmedia.business-standard.com/_media/bs/img/article/2019-02/17/full/1550403842-375.jpg",
+        "runs" : "13704",
+        "best": "164",
+        "average": 42.03,
+        "strikerate": 80.39,
+        "fifties": 82,
+        "centuries" : 30
+    },
+    {
+        "id": 3,
+        "name": "Sanath Jayasuriya",
+        "matches": 445,
+        "imagePath": "https://www.cricket.com.au/~/-/media/News/2021/06/04sanath.ashx?w=1600",
+        "runs" : "13430",
+        "best": "189",
+        "average": 32.83,
+        "strikerate": 91.90,
+        "fifties": 68,
+        "centuries" : 28
+    },
+    {
+        "id": 4,
+        "name": "Mahela Jayawardene",
+        "matches": 448,
+        "imagePath": "https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2019/05/26/Pictures/assignment-name-in-brief_e32620ee-7fb3-11e9-98c6-ecfd32845dee.jpg",
+        "runs" : "12260",
+        "best": "144",
+        "average": 33.37,
+        "strikerate": 78,
+        "fifties": 77,
+        "centuries" : 19
+    },
+    {
+        "id": 5,
+        "name": "Virat Kohli",
+        "matches": 254,
+        "imagePath": "https://cdn.insidesport.co/wp-content/uploads/2021/09/02112816/1911.jpg",
+        "runs" : "12169",
+        "best": "183",
+        "average": 59.07,
+        "strikerate": 93.17,
+        "fifties": 62,
+        "centuries" : 43
+    }
+    
+]
+
