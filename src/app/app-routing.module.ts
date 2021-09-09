@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 import { BatsmanDetailsComponent } from './player-stats/batsman-details/batsman-details.component';
 import { BowlerDetailsComponent } from './player-stats/bowler-details/bowler-details.component';
 import { PlayerStatsComponent } from './player-stats/player-stats.component';
@@ -8,6 +9,7 @@ import { RankingsComponent } from './rankings/rankings.component';
 import { TeamRankingsComponent } from './rankings/team-rankings/team-rankings.component';
 
 const routes: Routes = [
+  { path: "", component: PlayerStatsComponent},
   { path: "rankings", component: RankingsComponent},
   { path: "teamRankings", component: TeamRankingsComponent},
   { path: "playerStats", component: PlayerStatsComponent},

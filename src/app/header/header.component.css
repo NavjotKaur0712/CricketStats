@@ -1,6 +1,11 @@
 .toolbar{
-    background-color: #c4b1a4;
+    background-color: rgb(126, 116, 110);
+    width: 100%;
 }
+
+/* .header{
+    position:fixed;
+} */
 
 .app-name{
     font-size: xx-large;
@@ -10,15 +15,8 @@
 
 .header-elements{
     font-size: medium;
-    color:rgb(129, 127, 123);
+    color:#c4b1a4;
     margin-left: 1.2%;
     margin-top: 5px;
     text-decoration: none;
 }
-
-/* h2{
-    margin-left: 20%;
-    margin-top: 5%;
-    font-size: xx-large;
-    font-family: monospace;
-} */

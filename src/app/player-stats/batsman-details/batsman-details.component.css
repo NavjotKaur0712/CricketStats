@@ -1,0 +1,19 @@
+/* .container{
+    display:flex;
+    flex-direction: row;
+    /* margin-left:12% 
+    margin-top: 5%
+} */
+
+.row{
+    margin-top: 5%
+}
+
+.button{
+    margin-left: 46%;
+    margin-top: 5%;
+}
+
+.pieChart{
+    margin-left:0.5%
+} 

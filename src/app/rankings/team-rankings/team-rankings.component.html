@@ -1,3 +1,4 @@
+<app-rankings-list></app-rankings-list>
 <div class="container">
     <h1>TEAM RANKINGS!</h1>
     <div class="buttons">
@@ -5,79 +6,85 @@
         <button mat-stroked-button color="accent" class="team-buttons" (click)="odiMatch()">ODI</button>
         <button mat-stroked-button color="accent" class="team-buttons" (click)="t20Match()">T20</button>
     </div>
+    <div *ngIf="testMatchRankings">
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef> ID </th>
+                <td mat-cell *matCellDef="let testRanking">{{testRanking.id}}</td>
+            </ng-container>
 
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="testMatchRankings">
-        <ng-container matColumnDef="id">
-            <th mat-header-cell *matHeaderCellDef> ID </th>
-            <td mat-cell *matCellDef="let testRanking">{{testRanking.id}}</td>
-        </ng-container>
+            <ng-container matColumnDef="country">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef> COUNTRY </th>
+                <td mat-cell *matCellDef="let testRanking">{{testRanking.country}}</td>
+            </ng-container>
 
-        <ng-container matColumnDef="country">
-            <th mat-header-cell *matHeaderCellDef> COUNTRY </th>
-            <td mat-cell *matCellDef="let testRanking">{{testRanking.country}}</td>
-        </ng-container>
+            <ng-container matColumnDef="ratings">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef> RATINGS </th>
+                <td mat-cell *matCellDef="let testRanking">{{testRanking.ratings}}</td>
+            </ng-container>
 
-        <ng-container matColumnDef="ratings">
-            <th mat-header-cell *matHeaderCellDef> RATINGS </th>
-            <td mat-cell *matCellDef="let testRanking">{{testRanking.ratings}}</td>
-        </ng-container>
+            <ng-container matColumnDef="points">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef> POINTS </th>
+                <td mat-cell *matCellDef="let testRanking">{{testRanking.points}}</td>
+            </ng-container>
 
-        <ng-container matColumnDef="points">
-            <th mat-header-cell *matHeaderCellDef> POINTS </th>
-            <td mat-cell *matCellDef="let testRanking">{{testRanking.points}}</td>
-        </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons></mat-paginator>
+    </div>
+    <div *ngIf="odiMatchRankings">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> ID </th>
+                <td mat-cell *matCellDef="let odiRanking">{{odiRanking.id}}</td>
+            </ng-container>
 
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
+            <ng-container matColumnDef="country">
+                <th mat-header-cell *matHeaderCellDef> COUNTRY </th>
+                <td mat-cell *matCellDef="let odiRanking">{{odiRanking.country}}</td>
+            </ng-container>
 
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="odiMatchRankings">
-        <ng-container matColumnDef="id">
-            <th mat-header-cell *matHeaderCellDef> ID </th>
-            <td mat-cell *matCellDef="let odiRanking">{{odiRanking.id}}</td>
-        </ng-container>
+            <ng-container matColumnDef="ratings">
+                <th mat-header-cell *matHeaderCellDef> RATINGS </th>
+                <td mat-cell *matCellDef="let odiRanking">{{odiRanking.ratings}}</td>
+            </ng-container>
 
-        <ng-container matColumnDef="country">
-            <th mat-header-cell *matHeaderCellDef> COUNTRY </th>
-            <td mat-cell *matCellDef="let odiRanking">{{odiRanking.country}}</td>
-        </ng-container>
+            <ng-container matColumnDef="points">
+                <th mat-header-cell *matHeaderCellDef> POINTS </th>
+                <td mat-cell *matCellDef="let odiRanking">{{odiRanking.points}}</td>
+            </ng-container>
 
-        <ng-container matColumnDef="ratings">
-            <th mat-header-cell *matHeaderCellDef> RATINGS </th>
-            <td mat-cell *matCellDef="let odiRanking">{{odiRanking.ratings}}</td>
-        </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons></mat-paginator>
+    </div>
+    <div *ngIf="t20MatchRankings">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> ID </th>
+                <td mat-cell *matCellDef="let t20Ranking">{{t20Ranking.id}}</td>
+            </ng-container>
 
-        <ng-container matColumnDef="points">
-            <th mat-header-cell *matHeaderCellDef> POINTS </th>
-            <td mat-cell *matCellDef="let odiRanking">{{odiRanking.points}}</td>
-        </ng-container>
+            <ng-container matColumnDef="country">
+                <th mat-header-cell *matHeaderCellDef> COUNTRY </th>
+                <td mat-cell *matCellDef="let t20Ranking">{{t20Ranking.country}}</td>
+            </ng-container>
 
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
+            <ng-container matColumnDef="ratings">
+                <th mat-header-cell *matHeaderCellDef> RATINGS </th>
+                <td mat-cell *matCellDef="let t20Ranking">{{t20Ranking.ratings}}</td>
+            </ng-container>
 
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="t20MatchRankings">
-        <ng-container matColumnDef="id">
-            <th mat-header-cell *matHeaderCellDef> ID </th>
-            <td mat-cell *matCellDef="let t20Ranking">{{t20Ranking.id}}</td>
-        </ng-container>
+            <ng-container matColumnDef="points">
+                <th mat-header-cell *matHeaderCellDef> POINTS </th>
+                <td mat-cell *matCellDef="let t20Ranking">{{t20Ranking.points}}</td>
+            </ng-container>
 
-        <ng-container matColumnDef="country">
-            <th mat-header-cell *matHeaderCellDef> COUNTRY </th>
-            <td mat-cell *matCellDef="let t20Ranking">{{t20Ranking.country}}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="ratings">
-            <th mat-header-cell *matHeaderCellDef> RATINGS </th>
-            <td mat-cell *matCellDef="let t20Ranking">{{t20Ranking.ratings}}</td>
-        </ng-container>
-
-        <ng-container matColumnDef="points">
-            <th mat-header-cell *matHeaderCellDef> POINTS </th>
-            <td mat-cell *matCellDef="let t20Ranking">{{t20Ranking.points}}</td>
-        </ng-container>
-
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons></mat-paginator>
+    </div>
 </div>

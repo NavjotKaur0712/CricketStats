@@ -47,6 +47,8 @@ import { BowlerStatsComponent } from './player-stats/bowler-stats/bowler-stats.c
 import { BatsmanStatsComponent } from './player-stats/batsman-stats/batsman-stats.component';
 import { BatsmanDetailsComponent } from './player-stats/batsman-details/batsman-details.component';
 import { BowlerDetailsComponent } from './player-stats/bowler-details/bowler-details.component';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,8 @@ import { BowlerDetailsComponent } from './player-stats/bowler-details/bowler-det
     BowlerStatsComponent,
     BatsmanStatsComponent,
     BatsmanDetailsComponent,
-    BowlerDetailsComponent
+    BowlerDetailsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -100,7 +103,8 @@ import { BowlerDetailsComponent } from './player-stats/bowler-details/bowler-det
     MatToolbarModule,
     MatTooltipModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HighchartsChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

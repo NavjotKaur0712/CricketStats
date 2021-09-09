@@ -1,17 +1,18 @@
 h1{
-    font-size: 40px;
+    font-size: 35px;
     font-family:Arial, Helvetica, sans-serif;
     color: rgb(221, 207, 202);
     background-color: rgb(112, 77, 77);
-    margin-left: 8%;
-    margin-top: 3%;
+    margin-left: 10%;
+    padding: 1% 1% 1% 1%;
+    margin-top: 2%;
 }
 
 .buttons{
     background-color: rgb(247, 244, 243);
     width: 300px;
-    margin-left: 10%;
-    margin-top: 20px;
+    margin-left: 13%;
+    margin-top: 18px;
 }
 
 .team-buttons{
@@ -20,7 +21,7 @@ h1{
 
 table {
     width: 50%;
-    margin-left: 20%; 
+    margin-left: 30%; 
     margin-top: 2%;  
   }
 
