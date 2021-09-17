@@ -4,6 +4,8 @@ import { RankingsComponent } from '../rankings.component';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { TableColumn } from 'src/app/shared/models/tableColumn';
+import { TableData } from 'src/app/shared/models/tableData';
 
 
 @Component({
@@ -16,8 +18,9 @@ export class TeamRankingsComponent implements OnInit {
   odiRankings!: any[];
   t20Rankings!: any[];
 
-  dataSource!: any;
-  displayedColumns: string[] = ['id', 'country', 'ratings', 'points'];
+  dataSource!: TableData[];
+  //  displayedColumns: any[] = ['id', 'country', 'ratings', 'points'];
+  displayedColumns!: TableColumn[];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -27,37 +30,53 @@ export class TeamRankingsComponent implements OnInit {
   t20MatchRankings: boolean = false;
 
   constructor(private _teamRankings: RankingsService) { }
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-
-  }
-
+ 
+  // ngAfterViewInit() {
+  //   this.dataSource.paginator = this.paginator;
+  //   this.dataSource.sort = this.sort;
+  // }
+  
   ngOnInit(): void {
+    // this.tableColumns;
+    this.displayedColumns = [
+          {dataKey: 'id' },
+          {dataKey: 'country'},
+          {dataKey: 'points'}, 
+          {dataKey: 'ratings'}
+    ]
     this._teamRankings.getTestRankings()
       .subscribe(response => {
         this.testRankings = response;
         this.dataSource = this.testRankings;
         console.log(this.testRankings);
-        this.dataSource = new MatTableDataSource(this.testRankings);
+        // this.dataSource = new MatTableDataSource(this.testRankings);
       })
-      this._teamRankings.getOdiRankings()
-      .subscribe(response => {
-        this.odiRankings = response;
-        this.dataSource = this.odiRankings;
-        console.log(this.odiRankings);
-        this.dataSource = new MatTableDataSource(this.odiRankings);  
-      })
-      this._teamRankings.getT20Rankings()
-      .subscribe(response => {
-        this.t20Rankings = response;
-        this.dataSource = this.t20Rankings;
-        console.log(this.t20Rankings);
-        this.dataSource = new MatTableDataSource(this.t20Rankings);
-      })
+      // this._teamRankings.getOdiRankings()
+      // .subscribe(response => {
+      //   this.odiRankings = response;
+      //   this.dataSource = this.odiRankings;
+      //   console.log(this.odiRankings);
+      //   this.dataSource = new MatTableDataSource(this.odiRankings);  
+      // })
+      // this._teamRankings.getT20Rankings()
+      // .subscribe(response => {
+      //   this.t20Rankings = response;
+      //   this.dataSource = this.t20Rankings;
+      //   console.log(this.t20Rankings);
+      //   this.dataSource = new MatTableDataSource(this.t20Rankings);
+      // })
   }
 
+
+  // tableColumns(){
+  //   this.displayedColumns = [
+  //     {name : 'id'},
+  //     {name : 'country'},
+  //     {name : 'points'},
+  //     {name : 'ratings'}
+  //   ]
+
+  //}
   testMatch() {
     this._teamRankings.getTestRankings()
       .subscribe(response => {

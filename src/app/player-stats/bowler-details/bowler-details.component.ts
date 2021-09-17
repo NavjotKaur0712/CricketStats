@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PlayerStatsService } from 'src/app/shared/services/player-stats.service';
 import * as Highcharts from 'highcharts';
+import jsPDF from'jspdf';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-bowler-details',
@@ -17,10 +19,28 @@ export class BowlerDetailsComponent implements OnInit {
 
   constructor(private _bowlerDetails: PlayerStatsService, private route: ActivatedRoute) { }
 
+  @ViewChild ('htmlData') htmlData!:ElementRef;
+
   ngOnInit(): void {
     let id = parseInt(this.route.snapshot.paramMap.get('id') || '');
     this.bowlerId = id;
     this.getBowlerDetails(id);
+  }
+
+  public openPdf() : void {
+    let DATA: any = document.getElementById('htmlData');
+ 
+    html2canvas(DATA).then(canvas => {
+      let fileWidth = 250;
+      let fileHeight = canvas.height* fileWidth / canvas.width;
+ 
+      const FILEURI = canvas.toDataURL('image/png')
+      let PDF = new jsPDF('p', 'mm', 'a4');
+      let position = 0;
+      PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight)
+ 
+      PDF.save('cricket-statistics.pdf');
+    });
   }
 
   getBowlerDetails(id: number){

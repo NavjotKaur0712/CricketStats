@@ -1,0 +1,17 @@
+table {
+    width: 50%;
+    margin-left: 30%; 
+    margin-top: 2%;  
+  }
+
+table{
+    background-color: rgb(209, 161, 145);
+}
+
+th,td{
+    font-size: larger;
+}
+
+th{
+    text-transform: capitalize;
+}

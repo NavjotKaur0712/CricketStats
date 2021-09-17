@@ -49,6 +49,8 @@ import { BatsmanDetailsComponent } from './player-stats/batsman-details/batsman-
 import { BowlerDetailsComponent } from './player-stats/bowler-details/bowler-details.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { HomeComponent } from './home/home.component';
+import { DataTableComponent } from './shared/reusableComponent/data-table/data-table.component';
+import { DataPropertyGetterPipe } from './shared/pipes/dataPropertyGetterPipe';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { HomeComponent } from './home/home.component';
     BatsmanStatsComponent,
     BatsmanDetailsComponent,
     BowlerDetailsComponent,
-    HomeComponent
+    HomeComponent,
+    DataPropertyGetterPipe,
+    DataTableComponent
   ],
   imports: [
     BrowserModule,
